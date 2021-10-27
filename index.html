@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Formulario 2</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario 2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        legend {
+            color: blue;
+        }
+        select, input {
+            margin-top: 5px;
+        }
+        label{
+            display: inline-block;
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Curriculum Vitae</h1>
+
+    <form action="mailto:cv@gmail.com" method="get" autocomplete="on">
+        <fieldset>
+            <legend style="text-align:left;">Datos personales</legend>
+
+                <label for="DNI">DNI:</label>
+                <input type="text" id="DNI" name="DNI" pattern="[0-9]{8}[A-Z]{1}" required placeholder="11.111.111-X" size="13">
+
+            <br>
+
+                <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" maxlength="20" pattern="[A-Za-z]{1,20}" required>
+
+            <br>
+
+                <label for="apellido1">Apellido 1:</label>
+                    <input type="text" name="apellido1" id="apellido1" maxlength="30" autocomplete="nickname" pattern="[A-Za-z]{1,30}" required size="30">
+
+            <br>
+
+                <label for="apellido2">Apellido 2:</label>
+                    <input type="text" name="apellido2" id="apellido2" maxlength="30" autocomplete="nickname" pattern="[A-Za-z]{1,30}" required size="30">
+
+            <br>
+
+                <label for="direccion">Dirección:</label>
+                    <input type="text" name="direccion" id="direccion" maxlength="50" size="50">
+
+            <br>
+
+                <label for="codigo">Codigo Postal:</label>
+                    <input type="text" name="codigo" id="codigo" placeholder="11111" size="6" maxlength="5" pattern="[0-9]{5}">
+
+            <br>
+
+                <label for="poblacion">Población:</label>
+                    <input type="text" name="poblacion" id="poblacion" maxlength="50" size="50">
+
+            <br>
+
+                <label for="provincia">Provincia:</label>
+                    <select name="provincia" id="provincia">
+                        <option value="laspalmas">Las Palmas</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="Sevilla"> Sevilla</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="zaragoza">Zaragoza</option>
+                    </select> 
+
+            <br>
+
+                <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" name="fecha" id="fecha" max="1999-12-12">
+
+            <br>
+
+                <label id="sex">Sexo</label>
+                    <input type="radio" name="sexo" id="sexo-m" value="m" /> 
+                <label for="sexo-m">Mujer</label>
+                    <input type="radio" name="sexo" id="sexo-h" value="h" /> 
+                <label for="sexo-h">Hombre</label>
+
+            <br>
+
+                <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" id="telefono" placeholder="999-999-999" size="13" pattern="[0-9]{1,13}" required>
+
+            <br>
+
+                <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" size="50">
+
+        </fieldset>
+
+        <fieldset>
+            <legend style="text-align: left;">Formación y Experiencia</legend>
+
+                <label for="estudios">Estudios cursados</label>
+                    <select name="estudios" id="estudios">
+                        <option value="gradomedio">CICLO GRADO MEDIO</option>
+                        <option value="gradosuperior">CICLO GRADO SUPERIOR</option>
+                        <option value="universitarios">UNIVERSITARIOS</option>
+                    </select>
+                
+            <br>
+
+                <label id="titulo">Titulo:</label>
+                    <input type="text" size="50" required>
+
+            <br>
+
+                <label id="experiencia">Experiencia laboral</label> 
+                    <input type="radio" name="exp" id="si" value="s" /> 
+                <label for="si">Si</label>
+                    <input type="radio" name="exp" id="no" value="n" /> 
+                <label for="no">No</label>
+                
+            <br>
+
+                <label id="idomas">Idiomas</label>
+                    <select name="idiomas" id="idiomas" size="4">
+                        <option value="español">Español</option>
+                        <option value="ingles">Inglés</option>
+                        <option value="frances">Francés</option>
+                        <option value="aleman">Alemán</option>
+                    </select>
+
+            <br>
+
+                <label id="curriculum">Curriculum</label>
+                    <input type="file">
+
+        </fieldset>
+
+        <fieldset>
+            <legend style="text-align: left;">Acceso al Portal</legend>
+
+                    <label for="user">Usuario</label>
+                        <input type="text" name="user" id="user" maxlength="10" required pattern="[A-Za-z0-9]{1,10}">
+
+            <br>
+
+                    <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" maxlength="10" pattern="[A-Za-z0-9]{1,10}">
+                
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros</legend>
+                    
+                    <label for="files">Otros datos:</label>
+                        <textarea name="files" id="files" rows="9" cols="60" placeholder="Indica aquí cualquier otra información"></textarea>
+        </fieldset>
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar registo">
+
+    </form>
+
+</body>
+
+</html>
