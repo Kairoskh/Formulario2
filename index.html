@@ -17,6 +17,11 @@
             display: inline-block;
             width: 180px;
         }
+        .boton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -73,14 +78,14 @@
 
             <br>
 
-                <label for="fecha">Fecha de nacimiento</label>
+                <label for="fecha">Fecha de nacimiento:</label>
                     <input type="date" name="fecha" id="fecha" max="1999-12-12">
 
             <br>
 
-                <label id="sex">Sexo</label>
+                <label id="sex">Sexo:</label>
                     <input type="radio" name="sexo" id="sexo-m" value="m" /> 
-                <label for="sexo-m">Mujer</label>
+                <label style="width: auto;" for="sexo-m">Mujer</label>
                     <input type="radio" name="sexo" id="sexo-h" value="h" /> 
                 <label for="sexo-h">Hombre</label>
 
@@ -94,6 +99,19 @@
                 <label for="email">Email:</label>
                     <input type="email" name="email" id="email" size="50">
 
+        </fieldset>
+
+        <fieldset>
+            <legend style="text-align: left;">Acceso al Portal</legend>
+
+                    <label for="user">Usuario</label>
+                        <input type="text" name="user" id="user" maxlength="10" required pattern="[A-Za-z0-9]{1,10}">
+
+            <br>
+
+                    <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" maxlength="10" pattern="[A-Za-z0-9]{1,10}">
+                
         </fieldset>
 
         <fieldset>
@@ -113,15 +131,15 @@
 
             <br>
 
-                <label id="experiencia">Experiencia laboral</label> 
+                <label id="experiencia">Experiencia laboral:</label> 
                     <input type="radio" name="exp" id="si" value="s" /> 
-                <label for="si">Si</label>
+                <label style="width: auto;" for="si">Si</label>
                     <input type="radio" name="exp" id="no" value="n" /> 
                 <label for="no">No</label>
                 
             <br>
 
-                <label id="idomas">Idiomas</label>
+                <label id="idomas">Idiomas:</label>
                     <select name="idiomas" id="idiomas" size="4">
                         <option value="español">Español</option>
                         <option value="ingles">Inglés</option>
@@ -131,22 +149,9 @@
 
             <br>
 
-                <label id="curriculum">Curriculum</label>
+                <label id="curriculum">Curriculum:</label>
                     <input type="file">
 
-        </fieldset>
-
-        <fieldset>
-            <legend style="text-align: left;">Acceso al Portal</legend>
-
-                    <label for="user">Usuario</label>
-                        <input type="text" name="user" id="user" maxlength="10" required pattern="[A-Za-z0-9]{1,10}">
-
-            <br>
-
-                    <label for="pass">Contraseña</label>
-                        <input type="password" name="pass" id="pass" maxlength="10" pattern="[A-Za-z0-9]{1,10}">
-                
         </fieldset>
 
         <fieldset>
@@ -156,9 +161,10 @@
                         <textarea name="files" id="files" rows="9" cols="60" placeholder="Indica aquí cualquier otra información"></textarea>
         </fieldset>
 
+            <div class="boton">
                     <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpiar registo">
-
+                    <input type="reset" value="Limpiar datos">
+            </div>
     </form>
 
 </body>
